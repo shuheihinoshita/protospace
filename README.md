@@ -43,8 +43,6 @@ prototype_id :integer
 content :string
 
 
-<!-- 以下は後ほど作成 -->
-
 ##Comment
 
 ###association
