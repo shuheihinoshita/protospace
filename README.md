@@ -4,12 +4,11 @@
 ##User
 
 ###association
-has_many :protos
+has_many :prototypes
 has_many :likes
 has_many :comments
 
 ###columns
-id :string
 name :string
 email :string
 password :string
@@ -19,81 +18,55 @@ profile :text
 works :string
 
 
-##Proto
+##prototype
 
 ###association
 has_many :Images
 has_many :likes
 has_many :comments
-has_many :protos_tags
-has_many :tags, through: :protos_tags
 belongs_to :user
 
 ###columns
-id :integer
 user_id :integer
 title :text
-catchcopy :text
+catch_copy :text
 concept :text
 
 
 ##Image
 
 ###association
-belongs_to :proto
+belongs_to :prototype
 
 ###columns
-id :integer
-proto_id :integer
-image_url :string
-
-
-##Tag
-
-###association
-has_many :protos_tags
-has_many :protos, through: :protos_tags
-
-###columns
-id :integer
-tagname :string
-
-
-##ProtosTag
-
-###association
-belongs_to :proto
-belongs_to :tag
-
-###columns
-id :integer
-proto_id :integer
-tag_id :integer
+prototype_id :integer
+content :string
 
 
 ##Comment
 
 ###association
 belongs_to :user
-belongs_to :proto
+belongs_to :prototype
 
 ###columns
-id :integer
 user_id :integer
-proto_id :integer
+prototype_id :integer
 message :text
 
 
-##Like
+<!-- ##Like
 
 ###association
 belongs_to :user
-belongs_to :proto
+belongs_to :prototype
 
 ###columns
 id :integer
 user_id :integer
-prototype_id :integer
+prototype_id :integer -->
+
+
 
 <!-- ## README
 
