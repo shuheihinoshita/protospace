@@ -40,6 +40,7 @@ belongs_to :prototype
 
 ###columns
 prototype_id :integer
+status :integer
 content :string
 
 
