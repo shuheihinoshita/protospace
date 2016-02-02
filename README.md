@@ -43,6 +43,8 @@ prototype_id :integer
 content :string
 
 
+<!-- 以下は後ほど作成 -->
+
 ##Comment
 
 ###association
@@ -55,7 +57,7 @@ prototype_id :integer
 message :text
 
 
-<!-- ##Like
+##Like
 
 ###association
 belongs_to :user
@@ -64,8 +66,7 @@ belongs_to :prototype
 ###columns
 id :integer
 user_id :integer
-prototype_id :integer -->
-
+prototype_id :integer
 
 
 <!-- ## README
